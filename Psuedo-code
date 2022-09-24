@@ -1,0 +1,88 @@
+1. A method that returns the sum of two integers
+Casual psuedo-code:
+
+Given num1 and num2 as parameters.
+
+Add num1 and num2 to get sum.
+
+Formal psuedo-code:
+
+START
+
+# Given num1 and num2 as parameters to method.
+
+SET sum = num1 + num2
+
+END
+
+2. A method that takes an array of strings, and returns a string that is all those strings concatenated together
+Casual psuedo-code:
+
+Given array of strings.
+
+Iterate through array, one string at a time
+  - save first string into new string
+  - add second string and so on until end of array
+  
+After iteration, return new string.
+
+Formal psuedo-code:
+
+START
+
+# Given an array of strings called string_array.
+
+WHILE string_array is not empty
+  SET new_string = new_string + value of array at space 0
+  reduce string_array by value of array at 0
+  
+PRINT new_string
+
+END
+
+3. A method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element. Example: everyOther([1, 4, 7, 2, 5]) => [1,7,5]
+
+Casual psuedo-code:
+Given array of integers.
+
+Iterate over array of integers.
+  - Add first element to new array
+  - Skip second element
+  - Continue until all elements have been iterated through.
+
+Return new array.
+
+Formal psuedo-code:
+START
+
+# Given an array of integers called numbers.
+
+SET iterator = 0
+SET new_numbers = []
+
+WHILE iterator <= length of numbers
+  Add numbers[iterator] to new_numbers
+  iterator = iterator + 1
+
+PRINT new_numbers
+
+END  
+
+4. A method that determines the index of the 3rd occurence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return nil
+
+Casual psuedo-code:
+Given a string.
+
+
+
+Formal psuedo-code:
+
+
+
+5. A method that takes two arrays of numbers and returns the result of merging the arrays. The elements of the first array should become the elements at the even indexes of the returned array, while the elements of the second array should become the elemenets at the odd indexes. For instance: merge);1, 2, 3,], [4, 5, 6]} => [1, 4, 2, 5, 3, 6].
+Casual psuedo-code:
+
+
+Formal psuedo-code:
+
+

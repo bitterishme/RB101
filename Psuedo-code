@@ -71,11 +71,25 @@ END
 4. A method that determines the index of the 3rd occurence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return nil
 
 Casual psuedo-code:
-Given a string.
 
+Given string.
+Given character.
 
-
+Iterate over every character in string.
+  Increase count for character occurence.
+  When character occurence is 3.
+    Show index of occurence.
+  At end, if character occurence is less than 3.
+    Show nil.
+  
 Formal psuedo-code:
+
+# Given character called character and string called string.
+
+SET iterator = 0
+
+WHILE iterator <= 3
+
 
 
 

@@ -17,7 +17,7 @@ def display_results(player, computer)
   if win?(player, computer)
     prompt('You won!')
   elsif win?(computer, player)
-    prompt("Computer won!")
+    prompt('Computer won!')
   else
     prompt("It's a tie!")
   end

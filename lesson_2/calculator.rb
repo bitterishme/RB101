@@ -1,10 +1,3 @@
-# 9/20/22 
-# ask the user for two numbers
-# ask the user for an operation to perform
-# perform the operation on the two numbers
-# output the result
-
-
 def prompt(message)
   puts "=> #{message}"
 end
@@ -29,14 +22,14 @@ end
 prompt('Welcome to Calculator! Enter you name:')
 
 name = ''
-loop do 
+loop do
   name = gets.chomp
 
   if name.empty?
     prompt("Make sure to use a valid name.")
-  else 
+  else
     break
-  end 
+  end
 end
 
 prompt("Hi #{name}!")
@@ -51,7 +44,7 @@ loop do # main loop
       break
     else
       prompt("Hmm... that doesn't look like a valid number")
-    end 
+    end
   end
 
   number2 = ''
@@ -61,10 +54,10 @@ loop do # main loop
 
     if valid_number?(number2)
       break
-    else 
+    else
       prompt("Hmm... that doesn't look like a valid number")
-    end 
-  end 
+    end
+  end
 
   operator_prompt = <<-MSG
     What opertation would you like to perform?
@@ -75,17 +68,17 @@ loop do # main loop
   MSG
 
   prompt(operator_prompt)
-  
+
   operator = ''
   loop do
     operator = gets.chomp
 
     if %w(1 2 3 4).include?(operator)
       break
-    else 
+    else
       prompt("Must choose 1, 2, 3 or 4")
-    end 
-  end 
+    end
+  end
 
   prompt("#{operation_to_message(operator)} the two numbers...")
 

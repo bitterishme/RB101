@@ -41,12 +41,53 @@ statement = "The Flintstones Rock"
 # For example:
 { "F"=>1, "R"=>1, "T"=>1, "c"=>1, "e"=>2, ... }
 
+restult = {}
+letters = ('A'..'Z').to_a + ('a'..'z').to_a
 
-#Algorithm
-# 1. Iterate overy every character in statement
-# 2. Take char, make key from it
-# 3. in crease count of char
-# 4. check the rest of statement for char
-#     - increase count if char found
-#     - move on to next char if not found
-# 5. Add count as value to key
+letters.each do |letter|
+  letter_frequency = statement.count(letter)
+  result[letter] = letter_frequency if letter_frequency > 0
+end
+
+# 8.
+# What happens when we modify an array while we are iterating over it? What would be output by this code?
+numbers = [1, 2, 3, 4]
+numbers.each do |number|
+  p number
+  numbers.shift(1)
+end
+# Output:
+# => 1
+# => 3
+numbers = [1, 2, 3, 4]
+numbers.each do |number|
+  p number
+  numbers.pop(1)
+end
+# Output
+# => 1
+# => 2
+# Iterators DO NOT work on a copy of the original array or from stale meta-data (length) about the array
+# They operate on the original array in real time.
+
+# 9. Write a version of the rails titleize implementation
+
+def titalize(title)
+  title.split.map { |word| word.capitalize }.join(' ')
+end
+
+words = "the flintstones rock"
+titalize(words)
+
+# 10.
+# Modify the following hash such that each member of the Munsters family has an additional "age_group" key that has one of three-values
+# describing the age group the family member is in (kid, adult, senior).
+
+munsters = {
+  "Herman" => { "age" => 32, "gender" => "male" },
+  "Lily" => { "age" => 30, "gender" => "female" },
+  "Grandpa" => { "age" => 402, "gender" => "male" },
+  "Eddie" => { "age" => 10, "gender" => "male" },
+  "Marilyn" => { "age" => 23, "gender" => "female"}
+}
+
